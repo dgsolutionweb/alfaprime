@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Alfa Prime - Cartão Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="card-container">
+            <div class="profile-header">
+                <div class="profile-logo">
+                    <img src="img/logo.png" alt="Alfa Prime Logo">
+                </div>
+                <p class="subtitle">Nosso prazer é atendê-lo!</p>
+            </div>
+
+            <div class="icons-scroll">
+                <div class="icons-track">
+                    <div class="icon-item">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <!-- Duplicate icons for seamless loop -->
+                    <div class="icon-item">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="icon-item">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons-container">
+                <a href="http://ioursmid.github.io/alfaprime" class="action-button" data-loading="true">
+                    <i class="fas fa-shopping-cart"></i>
+                    Compre no Boleto
+                </a>
+                <a href="http://ioursmid.github.io/alfacontatos" class="action-button" data-loading="true">
+                    <i class="fas fa-headset"></i>
+                    Fale com um Vendedor
+                </a>
+                <a href="http://www.dinamicasalfa.com/iphones" class="action-button" data-loading="true">
+                    <i class="fab fa-apple"></i>
+                    Compre seu iPhone
+                </a>
+                <a href="http://g.page/r/CdA8Fx9ezZmpEBE/review" class="action-button" data-loading="true">
+                    <i class="fab fa-google"></i>
+                    Avalie-nos no Google
+                </a>
+                <a href="https://www.instagram.com/alfa.prime_" class="action-button" data-loading="true">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+                <a href="https://www.facebook.com/alfaassistencia?mibextid=LQQJ4d&mibextid=LQQJ4d" class="action-button" data-loading="true">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+            </div>
+
+            <div class="developer-section">
+                <a href="https://wa.me/5517999754390" class="developer-button" target="_blank">
+                    <i class="fas fa-code"></i>
+                    Junte-se à DGSolution WEB
+                </a>
+                <div class="developer-credits">
+                    Desenvolvido por DGSolution WEB
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <img src="img/logo.png" alt="Alfa Prime Logo">
+            </div>
+            <div class="loading-spinner">
+                <div class="loading-spinner-ring"></div>
+                <div class="loading-spinner-ring"></div>
+                <div class="loading-spinner-ring"></div>
+            </div>
+            <div class="loading-message">
+                <strong>Muito obrigado por nos visitar!</strong>
+                Você é sempre bem vindo!<br>
+                Estamos te direcionando ao site...
+            </div>
+            <div class="loading-dots">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            const actionButtons = document.querySelectorAll('.action-button[data-loading="true"]');
+
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    
+                    loadingOverlay.classList.add('active');
+                    
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
